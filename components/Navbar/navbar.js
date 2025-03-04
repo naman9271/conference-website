@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import Dropdown from '../illustration/dropdown';
-import { useState, useEffect, useRef, useCallback } from 'react';
-import links from '../../config/links.json';
-import NavDrop from './navDrop';
-import Hamburger from '../illustration/hamburger';
-import { useMediaQuery } from 'react-responsive';
-import Cancel from '../illustration/cancel';
-import Image from 'next/image';
+import Link from "next/link";
+import Dropdown from "../illustration/dropdown";
+import { useState, useEffect, useRef, useCallback } from "react";
+import links from "../../config/links.json";
+import NavDrop from "./navDrop";
+import Hamburger from "../illustration/hamburger";
+import { useMediaQuery } from "react-responsive";
+import Cancel from "../illustration/cancel";
+import Image from "next/image";
 
 function Navbar() {
 	const isTablet = useMediaQuery({ maxWidth: '1118px' });
@@ -17,57 +17,60 @@ function Navbar() {
 	const svg = useRef(null);
 	let closeTimeout = useRef(null);
 
-	const handleClosing = useCallback((event) => {
-		if (show && !event.target.closest('.subMenu')) {
-			setShow(null);
-		}
-	}, [show]);
+  const handleClosing = useCallback(
+    (event) => {
+      if (show && !event.target.closest(".subMenu")) {
+        setShow(null);
+      }
+    },
+    [show],
+  );
 
-	useEffect(() => {
-		document.addEventListener('mousedown', handleClosing);
-		return () => {
-			document.removeEventListener('mousedown', handleClosing);
-		};
-	}, [handleClosing]);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClosing);
+    return () => {
+      document.removeEventListener("mousedown", handleClosing);
+    };
+  }, [handleClosing]);
 
-	const handleCloseMenu = (event) => {
-		if (menuRef.current && !menuRef.current.contains(event.target)) {
-			setDrop(false);
-		} if (svg.current && event.target === svg.current) {
-			setDrop(true);
-		}
-	};
+  const handleCloseMenu = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setDrop(false);
+    }
+    if (svg.current && event.target === svg.current) {
+      setDrop(true);
+    }
+  };
 
-	useEffect(() => {
-		document.addEventListener('click', handleCloseMenu);
-		return () => {
-			document.removeEventListener('click', handleCloseMenu);
-		};
-	}, [menuRef]);
+  useEffect(() => {
+    document.addEventListener("click", handleCloseMenu);
+    return () => {
+      document.removeEventListener("click", handleCloseMenu);
+    };
+  }, [menuRef]);
 
-	const handleMouseEnter = (title) => {
-		clearTimeout(closeTimeout.current);
-		setShow(title);
-	};
+  const handleMouseEnter = (title) => {
+    clearTimeout(closeTimeout.current);
+    setShow(title);
+  };
 
-	const handleMouseLeave = () => {
-		closeTimeout.current = setTimeout(() => {
-			if (!isSubMenuHovered) {
-				setShow(null);
-			}
-		}, 300);
-	};
+  const handleMouseLeave = () => {
+    closeTimeout.current = setTimeout(() => {
+      if (!isSubMenuHovered) {
+        setShow(null);
+      }
+    }, 300);
+  };
 
-	const handleSubMenuEnter = () => {
-		clearTimeout(closeTimeout.current);
-		setIsSubMenuHovered(true);
-	};
+  const handleSubMenuEnter = () => {
+    clearTimeout(closeTimeout.current);
+    setIsSubMenuHovered(true);
+  };
 
-	const handleSubMenuLeave = () => {
-		setIsSubMenuHovered(false);
-		setShow(null);
-	};
-
+  const handleSubMenuLeave = () => {
+    setIsSubMenuHovered(false);
+    setShow(null);
+  };
 	return (
 		<div className={`flex justify-center items-center fixed w-full backdrop-blur ${drop && 'bg-[#1B1130]/90'} top-0 z-[99] text-white`}>
 			<div className='w-[1131px]'>

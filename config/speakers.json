@@ -5,92 +5,69 @@
 		"lists": []
 	},
 	{
-		"city": "Online",
-		"location": "Online Edition",
+		"city": "Singapore",
+		"location": "Singapore, Singapore",
 		"lists": [
 		{
-			"name": "TBD",
-			"title": "TDB",
-			"img": ""
+			"name": "Hugo Guerrero",
+			"title": "Head of Technical Marketing at Kong",
+			"img": "/img/london-speakers/Hugo Guerrero.webp"
+		},
+		{
+			"name": "Naresh Jain",
+			"title": "Founder & CEO at Specmatic",
+			"img": "/img/paris-images/Naresh.webp"
+		},
+		{
+			"name": "Lukasz Gornicki",
+			"title": "Executive Director at AsyncAPI Initiative",
+			"img": "/img/london-speakers/Lukasz Gornicki.webp"
+		},
+		{
+			"name": "Ankit Kumar",
+			"title": "Head of Developer and Customer Success at Aklivity",
+			"img": "/img/london-speakers/Ankit.webp"
 		}
-		
-	
-		],
-		"agenda": [
-			{
-                "time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-            }
-            
-		]
+	],
+		"agenda": null
 	},
 	{
-		"location": "London, United Kingdom",
-		"city": "London",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Paris, France",
-		"city": "Paris",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Lagos, Nigeria",
-		"city": "Lagos",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Singapore",
-		"city": "Singapore",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
-	},
-	{
-		"location": "Munich, Germany",
 		"city": "Munich",
-		"agenda": [
-			 {
-				"time": "TBD",
-                "session": "TBD",
-                "speaker": "TBD",
-                "type": "TBD"
-			}
-		],
-		"lists": [	]		
+		"location": "Munich, Germany",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Lagos",
+		"location": "Lagos, Nigeria",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "London",
+		"location": "London, UK",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Suprise!",
+		"location": "Suprise!",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Online",
+		"location": "AsyncAPI YouTube Channel",
+		"lists": [],
+		"agenda": null
+	},
+	{
+		"city": "Paris",
+		"location": "Paris, France",
+		"lists": [],
+		"agenda": null
 	}
+
 	
 	
 ]
